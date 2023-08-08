@@ -63,7 +63,7 @@ usersRouter.put("/users/forgot", async (req, res) => {
     const randomString =
       Math.random().toString(36).substring(2, 15) +
       Math.random().toString(36).substring(2, 15);
-    const link = `https://login-page-fe.netlify.app/users/reset/${randomString}`;
+    const link = `https://sunny-taffy-bc62e7.netlify.app//users/reset/${randomString}`;
 
     matchedUser.resetToken = randomString;
     await User.findByIdAndUpdate(matchedUser.id, matchedUser);
